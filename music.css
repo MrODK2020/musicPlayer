@@ -14,11 +14,19 @@ display:flex;
 flex-direction:column;
 align-items:center;
 justify-content: center;
+background-image: url(image/bm4.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+
+
+
+
 }
+
 
 .music-container{
     background-color: white;
-    border-radius:15;
+    border-radius:15px;
     box-shadow:0 20px 20px 0 rgba(252,169,169,0.6) ;
     display:flex ;
     padding: 20px 30px;
@@ -85,27 +93,53 @@ justify-content: center;
     padding: 10px;
     margin:0 20px;
 }
+
 .action-btn-big{
     color:#cdc2d0;
     font-size:30px;
 }
 .action-btn:focus{
-    outline: 0;
+    outline: 0px;
 }
+.action-btn :hover{
+    color: black;
+}
+
 .music-info{
     background-color: rgba(255,255,255,0.5);
-    border-radius:15px 15px 0 0;
+    border-radius: 15px 15px 0 0;
     position:absolute;
     top:0;
     left:20px;
-    width:calc(100%-40%);
-    padding:10px 10px 10px 10px;
+    width:calc(100%-40px);
+    padding:10px 10px 10px 120px;
     opacity:0;
     transform: translateY(0%);
-    transition:transform 0.3s ease-in opacity 0.3 ease-in;
+    transition:transform 0.3s ease-in opacity 0.3s ease-in;
 }
 
-.music-container.play.music-info{
+.music-info h4{
+    margin:0px;
+}
+
+.music-container.play .music-info{
     opacity:1;
     transform: translateY(-100%);
+}
+
+.progress-container{
+    background:white;
+    border-radius:5px;
+    cursor:pointer;
+    margin:10px 0;
+    height: 4px;
+    width:100px;
+}
+
+ .progress{
+    background-color: #fe8daa;
+    border-radius:5px;
+    height: 100%;
+    width: 0%;
+    transition:width 0.1s linear;
 }
